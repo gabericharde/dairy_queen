@@ -1,0 +1,128 @@
+<body>
+  <div class="container">
+    <section class="header" style="padding-top: 20px;">
+      <h2>Double Dip</h2>
+      <h5>Your cinema visit calculator</h5>
+      <div class="row">
+        <div class="three columns icon-text">
+          <i class="icon-wd icon-wd-5x icon-wd-theater"></i>
+          <h6>Go to the cinema...</h6>
+        </div>
+        <div class="three columns icon-text">
+          <i class="icon-wd icon-wd-5x icon-wd-ticket"></i>
+          <h6>...see <i>n</i> films for the price of 1...</h6>
+        </div>
+        <div class="three columns icon-text">
+          <i class="icon-wd icon-wd-5x icon-wd-euro"></i>
+          <h6>...save your money...</h6>
+        </div>
+        <div class="three columns icon-text">
+          <i class="icon-wd icon-wd-5x icon-wd-popcorn"></i>
+          <h6>...or spend your savings on popcorn!</h6>
+        </div>
+      </div>
+    </section>
+
+    <!-- Here starts the form!!! -->
+
+    <form id="myForm" class=".superForm" action="action_page.php" style="border-bottom: 1px solid #D3D3D3">
+      <div class="row">
+        <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-calendar"></i></img>
+        </div>
+        <div class="five columns">
+          <label>Days from now</label>
+          <input class="u-full-width" type="number" placeholder="Ex: 0 to 4" id="DaysFromNow" name="days_from_now">
+        </div>
+        <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-clock-o"></i></img>
+        </div>
+        <div class="five columns">
+          <label>Max wait time between films</label>
+          <input class="u-full-width" type="number" placeholder="Time in minutes" id="MaxWaitTime" name="max_waiting_mins">
+
+        </div>
+        <div class="subrow">
+          <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-clock-o"></i></img>
+          </div>
+          <div class="five columns">
+            <label>Advertisement duration</label>
+            <input class="u-full-width" type="number" placeholder="Time in minutes" id="advertDuration" name="ads_mins">
+          </div>
+          <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-clock-o"></i></img>
+          </div>
+          <div class="five columns">
+            <label>Trailer duration</label>
+            <input class="u-full-width" type="number" placeholder="Time in minutes" id="trailerDuration" name="trailers_mins">
+
+          </div>
+
+        </div>
+        <div class="subrow">
+          <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-filmstrip"></i></img>
+          </div>
+          <div class="eleven columns">
+            <label>Movies of interest</label>
+            <input class="u-full-width" type="text" placeholder="Ex: 'Inception', 'Good Will Hunting'" id="interestedFilms" name="interesting_movies">
+          </div>
+        </div>
+        <div class="subrow">
+          <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-filmstrip-off"></i></img>
+          </div>
+          <div class="eleven columns">
+            <label>Movies to avoid</label>
+            <input class="u-full-width" type="text" placeholder="Ex: 'Gigli', 'The Last Airbender'" id="excludedFilms" name="movies_to_exclude">
+          </div>
+        </div>
+        <div class="subrow">
+          <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-clock-o"></i></img>
+          </div>
+          <div class="five columns">
+            <label>Acceptable dip overlap</label>
+            <input class="u-full-width" type="number" placeholder="Time in minutes" id="dipOverlap" name="acceptable_overlap_mins">
+          </div>
+          <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-checkbox"></i></img>
+          </div>
+          <div class="five columns">
+            <label>All films of interest must be in dip?</label>
+            <select name="all_interesting_movies_must_be_in_dip">
+              <option value="True">Yes, most definitely!</option>
+              <option value="False">No, I'm flexible.</option>
+            </select>
+          </div>
+        </div>
+    </form>
+    </div>
+    <div class="subrow" style="text-align:center">
+
+      <button class="button" id="submitButton" style="margin: 0 auto; text-align: center" type="submit" value="RUN">RUN</button>
+
+    </div>
+    <div class="container">
+      <table class="u-full-width table-results">
+        <thead>
+          <tr>
+            <th>Dips "<i>n</i>"</th>
+            <th>Films</th>
+            <th>OV</th>
+            <th>Times</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>'Bridge of Spies', 'Mrs. Doubtfire'</td>
+            <td>Yes</td>
+            <td>14:10-16:09, 15:30-17:57</td>
+            <td>Sony Cinestar, Berlin</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>'Star Wars', 'Bottle Rocket', 'Red Dawn'</td>
+            <td>Yes</td>
+            <td>18:00-20:27, 20:00-22:44, 22:40-01:47</td>
+            <td>Kinoplatz, Berlin</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</body>
