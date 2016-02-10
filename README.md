@@ -32,6 +32,10 @@ you can access the `rethinkdb` dashboard via
 [http://localhost:1880/](http://localhost:1880/) or you can work in an `jupyter` notebook via
 [http://localhost:1888/](http://localhost:1888/)
 
+To access the DB you can use the following port:
+
+*  default: 28015 (guest) => 8015 (host) // ** JS or Python **
+
 Of course you can always get into the vagrant box via
 ```bash
 vagrant ssh
