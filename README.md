@@ -34,7 +34,7 @@ you can access the `rethinkdb` dashboard via
 
 To access the DB you can use the following port:
 
-*  default: 28015 (guest) => 8015 (host) // ** JS or Python **
+*  default: 28015 (guest) => 8015 (host) // **JS or Python**
 
 Of course you can always get into the vagrant box via
 ```bash
