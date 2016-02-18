@@ -7,16 +7,25 @@ runButton.addEventListener('click', function() {
   console.log(formData);;
 });
 
-var request = new XMLHttpRequest();
 
-request.open('GET', 'http://private-3d4d82-googlemoviesscraper.apiary-mock.com/movies');
+// Sending form data to double dips API
+
+var request = new XMLHttpRequest();
+	method = 'GET';
+	url = 'http://private-3d4d82-googlemoviesscraper.apiary-mock.com/movies';
+
+request.open(method, url);
 
 request.onreadystatechange = function () {
-  if (this.readyState === 4) {
+  if (this.readyState === true) {
     console.log('Boston', this.near);
     console.log('', this.date);
 
   }
+  if (xmlhttp.status !== 200) {
+        return;
+    }
+  console.log(xmlhttp.responseText);
 };
 
 request.send();
