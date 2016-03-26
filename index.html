@@ -37,7 +37,7 @@
         <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-map-marker"></i></img></div>
         <div class="eleven columns">
           <label>Location</label>
-          <input class="u-full-width" type="text" placeholder="Berlin" id="near" name="near">
+          <input class="u-full-width" type="text" placeholder="Berlin" id="near" name="near" onblur="checkTextField(near)">
           </div>
       </div>
       <div class="row">
@@ -51,7 +51,7 @@
         </div>
         <div class="five columns">
           <label>Max wait time between films</label>
-          <input class="u-full-width" type="number" placeholder="Time in minutes" id="MaxWaitTime" name="max_waiting_mins">
+          <input class="u-full-width" type="number" placeholder="Time in minutes" id="maxWaitTime" name="max_waiting_mins">
 
         </div>
         <div class="subrow">
@@ -91,7 +91,7 @@
           </div>
           <div class="five columns">
             <label>Acceptable dip overlap</label>
-            <input class="u-full-width" type="number" placeholder="Time in minutes" id="dipOverlap" name="acceptable_overlap_mins">
+            <input class="u-full-width" type="number" placeholder="Time in minutes" id="dipOverlap" name="acceptable_overlap_mins" onblur="checkTextField(DipOverlap)">
           </div>
           <div class="one column"><img><i class="icon-wd icon-wd-lg icon-wd-checkbox"></i></img>
           </div>
@@ -108,6 +108,7 @@
     <div class="subrow" style="text-align:center">
 
       <button class="button" id="submitButton" style="margin: 0 auto; text-align: center" type="submit" value="RUN">RUN</button>
+      <div id="alertHere"></div>
 
     </div>
     <div class="container">
