@@ -23,7 +23,7 @@ function checkTextField(field) {
 }
 
 var request  = { // can be 'url string' or object:
-  url          : ('http://double-dipper.herokuapp.com/double-dips?location=' + data.near + '&days_from_now=' + data.daysFromNow + '&max_wait_mins=' + data.maxWaitTime + '&max_overlap_mins=' + data.dipOverlap),
+  url          : ('http://locache.herokuapp.com/double-dips?location=' + data.near + '&days_from_now=' + data.daysFromNow + '&max_wait_mins=' + data.maxWaitTime + '&max_overlap_mins=' + data.dipOverlap),
   // method    : 'POST' // [optional] (defaults to 'GET') 
   body      : data // [optional] payload data could be <formdata> or {key:val}'s or anything 
   //headers      : {} // [optional] (defaults to '{}' or in case of 'POST': 
@@ -33,3 +33,4 @@ var request  = { // can be 'url string' or object:
 minixhr(request, function (received) { console.log(received) })
 console.log(data);
 });
+
